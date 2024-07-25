@@ -4,7 +4,10 @@
   "description": "Central Job Portal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --ignore '*.json' index",
+    "scrap-linkedin": "node scrapper/linkedin-scrapper.js",
+    "scrap-indeed": "node scrapper/indeed-scrapper.js"
   },
   "repository": {
     "type": "git",
@@ -22,13 +25,22 @@
   "homepage": "https://github.com/lakshaykamat/easy-jobs#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-rate-limit": "^7.4.0",
     "helmet": "^7.1.0",
+    "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "mongoose-paginate-v2": "^1.8.3",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^22.13.1",
     "winston": "^3.13.1",
     "xss-clean": "^0.1.4"
   }
